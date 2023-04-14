@@ -104,23 +104,13 @@ button {
   overflow: hidden;
   width: 30%;
   filter: drop-shadow(0 0 40px crimson);
+  -webkit-filter: drop-shadow(0 0 40px crimson);
 }
 
 .hero-decoration img {
   position: absolute;
   height: 70%;
   object-fit: contain;
-  /* filter: drop-shadow(30px 5px 9.75rem crimson); */
-}
-
-.hero-content::before {
-  content: "";
-  filter: drop-shadow(10px 1px 9.75rem crimson);
-  background-color: red;
-}
-
-.decoration-shadow {
-  /* box-shadow: 5px 5px 500px 10px red; */
 }
 
 .extra-info-alert {
