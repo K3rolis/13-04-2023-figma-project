@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Roboto&family=Varela+Round&display=swap");
+
+:root {
+  --primary-text-color: #111111;
+  --secondary-text-color: #555555;
+  --tertiary-text-color: #777777;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: inherit;
+  outline: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 188px;
+  border-radius: 36px;
+  font-size: 2rem;
+  border: 2px solid red;
+  line-height: 30px;
+  color: var(--primary-text-color);
+  font-weight: 600;
+}
+
+.container {
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+/* HEADER */
+
+.header-wrapper {
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 34px;
+  color: var(--primary-text-color);
+  margin-left: 12px;
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-block: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.hero-decoration {
+  position: relative;
+}
+
+.hero-decoration img {
+  position: absolute;
+  top: 0;
+  /* right: -70px; */
+  width: 100%;
+  height: auto;
+
+  /* margin-left: 80px; */
+}
+
+.extra-info-alert {
+  color: #ff3998;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--primary-text-color);
+  font-weight: 900;
+  font-size: 4.8rem;
+  line-height: 58px;
+}
+
+.hero-text {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 30px;
+}
+
+/* BANNER */
+
+.banner {
+  padding-block: 122px 32px;
+  background: rgb(255, 57, 152);
+  background: linear-gradient(39deg, rgba(255, 57, 152, 1) 0%, rgba(255, 57, 57, 1) 31%, rgba(255, 129, 57, 1) 79%, rgba(57, 255, 160, 1) 100%);
+}
+
+.banner-title {
+  font-size: 4rem;
+  line-height: 48px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.banner-text {
+  font-size: 2rem;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+/* BRANDS */
+
+.brands {
+  margin-block: 64px 56px;
+}
+
+.brands-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.brands-item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.brands-item:nth-child(4) {
+  display: none;
+}
+
+.brand-name {
+  font-family: "Roboto", sans-serif;
+  color: #999;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.brand-name-small-caps {
+  font-size: 3.1rem;
+  line-height: 36px;
+}
+
+.brand-name-upper-caps {
+  font-size: 3.8rem;
+  line-height: 45px;
+}
+
+/* auction */
+
+.auction-wrapper {
+  margin-bottom: 92px;
+}
+
+.auction .container {
+  padding-right: 0px;
+}
+
+.auction-title {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  line-height: 48px;
+}
+
+.auction-text {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 30px;
+  color: var(--secondary-text-color);
+}
+
+.text-link {
+  font-weight: 500;
+  font-size: 2rem;
+  text-decoration: underline;
+  line-height: 30px;
+}
+
+.auction-items {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 40px;
+  overflow: hidden;
+}
+
+.auction-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  border-radius: 8px;
+}
+
+.auction-image {
+  width: 290px;
+  height: 278px;
+}
+
+.auction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.auction-item-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.auction-item-card-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.auction-item-card-first-line,
+.auction-item-card-second-line,
+.auction-item-card-third-line {
+  width: 50%;
+}
+
+.auction-item-card-first-line:nth-last-child(1),
+.auction-item-card-second-line:nth-last-child(1),
+.auction-item-card-third-line:nth-last-child(1) {
+  text-align: right;
+}
+
+.auction-item-card-first-line {
+  color: var(--tertiary-text-color);
+  font-size: 1.2rem;
+  line-height: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.text-orange {
+  color: #ff8139;
+}
+
+.auction-item-card-second-line {
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.price-decoration {
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  word-wrap: break-all;
+}
+
+.price-decoration::before {
+  content: url(./images/eth.png);
+  position: absolute;
+  /* width: 100%; */
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.auction-item-card-third-line {
+  color: var(--tertiary-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
