@@ -1,0 +1,64 @@
+@use 'responsive' as responsive;
+.brands {
+  margin-block: 64px 56px;
+
+  .brands-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    @include responsive.md {
+      display: flex;
+      margin-block: 122px;
+      column-gap: 50px;
+      justify-content: space-evenly;
+    }
+
+    @include responsive.md-x2 {
+      flex-wrap: wrap;
+      column-gap: 50px;
+    }
+
+    .brands-item {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      @include responsive.md {
+        width: auto;
+      }
+
+      &:nth-child(4) {
+        display: none;
+
+        @include responsive.md-x1 {
+          display: flex;
+        }
+      }
+
+      &:hover {
+        position: relative;
+        filter: brightness(50%);
+        top: -10px;
+        cursor: pointer;
+      }
+
+      .brand-name {
+        font-family: 'Roboto', sans-serif;
+        color: var(--extra-text-color);
+        font-weight: 400;
+        margin-left: 15px;
+      }
+
+      .brand-name-small-caps {
+        font-size: 3.1rem;
+        line-height: 36px;
+      }
+
+      .brand-name-upper-caps {
+        font-size: 3.8rem;
+        line-height: 45px;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use 'responsive' as responsive;
+
+.hero {
+  .container {
+    padding-right: 0;
+
+    .hero-wrapper {
+      display: flex;
+      padding-block: 80px;
+      justify-content: space-between;
+
+      @include responsive.md {
+        padding-block: 182px;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        width: 70%;
+
+        @include responsive.md {
+          width: 80%;
+        }
+
+        @include responsive.md-x1 {
+          width: 70%;
+        }
+
+        @include responsive.md-x2 {
+          width: 60%;
+        }
+
+        @include responsive.lg {
+          width: 50%;
+        }
+
+        .hero-title {
+          color: var(--primary-text-color);
+          font-weight: 900;
+          font-size: 4.8rem;
+          line-height: 58px;
+
+          @include responsive.md {
+            font-size: 9.6rem;
+            line-height: 116px;
+          }
+        }
+
+        .hero-text {
+          color: var(--secondary-text-color);
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 30px;
+        }
+      }
+
+      .hero-decoration {
+        position: relative;
+        overflow: hidden;
+        width: 30%;
+        filter: drop-shadow(0 0 40px crimson);
+        -webkit-filter: drop-shadow(0 0 40px crimson);
+
+        & img {
+          height: 70%;
+          object-fit: contain;
+          overflow: hidden;
+
+          @include responsive.xs {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

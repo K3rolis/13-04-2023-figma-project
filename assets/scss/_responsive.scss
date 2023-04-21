@@ -1,0 +1,42 @@
+$xs: 584;
+$md: 800;
+$md-x1: 900;
+$md-x2: 970;
+$lg: 1130;
+$xl: 1300;
+
+@mixin xs {
+  @media screen and (min-width: 584px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin md-x1 {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin md-x2 {
+  @media screen and (min-width: 970px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 1130px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1300px) {
+    @content;
+  }
+}

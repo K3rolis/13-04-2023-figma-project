@@ -1,0 +1,122 @@
+@use 'responsive' as responsive;
+.header {
+  .container {
+    .header-wrapper {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        display: flex;
+
+        .logo-brand {
+          fill: var(--primary-text-color);
+        }
+
+        .logo-text {
+          font-weight: 800;
+          font-size: 2.8rem;
+          line-height: 34px;
+          color: var(--primary-text-color);
+          margin-left: 12px;
+        }
+      }
+      .navigation-wrapper {
+        display: flex;
+
+        .theme-switch-wrapper {
+          display: flex;
+          align-items: center;
+          z-index: 100;
+
+          .theme-switch {
+            display: inline-block;
+            height: 40px;
+            position: relative;
+            width: 72px;
+
+            .theme-switch-input {
+              display: none;
+
+              &:checked + .slider {
+                background: var(--switcher-bg);
+                &:before {
+                  transform: translateX(32px);
+                  background-color: #758cfa;
+                  background-image: url(./assets/images/icons8-moon-24.png);
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                }
+              }
+            }
+            .slider {
+              background: var(--switcher-bg);
+              bottom: 0;
+              cursor: pointer;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              transition: 0.4s;
+
+              &:before {
+                bottom: 4px;
+                background-color: #f8d672;
+                content: '';
+                background-image: url(./assets/images/icons8-sun.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 32px;
+                left: 4px;
+                position: absolute;
+                transition: 0.4s;
+                width: 32px;
+                border-radius: 50%;
+              }
+            }
+            .round {
+              border-radius: 34px;
+            }
+          }
+        }
+
+        .hamburger {
+          padding-right: 32px;
+          margin-left: 30px;
+
+          @include responsive.md {
+            display: none;
+          }
+        }
+
+        @include responsive.md {
+          .navigation {
+            display: flex;
+            align-items: center;
+
+            & li {
+              list-style: none;
+              display: inline-block;
+              margin-left: 28px;
+
+              .text-pink {
+                color: #ff3998;
+              }
+
+              & a {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 20px;
+                color: var(--secondary-text-color);
+
+                &:hover {
+                  filter: brightness(180%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
