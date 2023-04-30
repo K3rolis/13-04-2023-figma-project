@@ -6,21 +6,6 @@
       display: flex;
       justify-content: space-between;
 
-      .logo {
-        display: flex;
-
-        .logo-brand {
-          fill: var(--primary-text-color);
-        }
-
-        .logo-text {
-          font-weight: 800;
-          font-size: 2.8rem;
-          line-height: 34px;
-          color: var(--primary-text-color);
-          margin-left: 12px;
-        }
-      }
       .navigation-wrapper {
         display: flex;
 
